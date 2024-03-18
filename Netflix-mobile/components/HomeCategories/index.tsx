@@ -5,8 +5,7 @@ import { Text} from '@/components/Themed';
 import {Image, FlatList} from 'react-native';
 import categories from '../../assets/data/categories';
 
-const firstCategory = categories.items[0];
-
+ 
 interface HomeProperties {
   category: {
     id: string;
