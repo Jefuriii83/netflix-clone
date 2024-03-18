@@ -1,4 +1,5 @@
 import React from 'react';
+import { View, Text } from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
@@ -21,18 +22,16 @@ export default function TabLayout() {
 
   return (
     <Tabs
-    
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
+        headerShown: false,
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: '',
+          title: 'Home',
           tabBarIcon: ({ color }) => <Feather name="home" size={24} color={color} />,
+          
         }}
       />
       <Tabs.Screen
@@ -40,6 +39,7 @@ export default function TabLayout() {
         options={{
           title: 'Search',
           tabBarIcon: ({ color }) => <Feather name="search" size={24} color={color} />,
+
         }}
       />
       <Tabs.Screen
@@ -56,6 +56,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <Feather name="menu" size={24} color={color} />,
         }}
       />
+     
     </Tabs>
   );
 }
