@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       backgroundImage:{
-        'bg-landpage' : "url('/assets/images/netflix-bg.jpg')"
+        'landpage' : "url('./assets/images/netflix-bg.jpg')"
       }
     },
   },

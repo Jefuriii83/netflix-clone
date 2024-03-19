@@ -29,15 +29,15 @@ const ProfileCard = (props: ProfileProps) => {
         };
 
   return (
-    <View className="">
+    <View className="flex">
       <TouchableOpacity
         onPress={profileAction}
         style={{ marginHorizontal: Platform.OS === "web" ? 4 : 8 }}
       >
-        <View className="w-[150px] h-[150px] rounded-xl ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96">
+        <View className="group flex-row w-44 mx-auto items-center justify-center border-2 border-transparent group-hover:border-white overflow-hidden ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96">
           <Image
             source={{ uri: profile.avatar }}
-            className="w-[150px] h-[150px] self-center ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96"
+            className="w-44 h-44 rounded-md flex ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96"
           />
         </View>
         <Text
@@ -48,7 +48,6 @@ const ProfileCard = (props: ProfileProps) => {
             paddingBottom: 50,
             fontSize: Platform.OS === "web" ? 24 : 14,
           }}
-          className="xl:text-9xl"
           >
           {profile.name}
         </Text>
