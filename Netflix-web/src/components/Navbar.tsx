@@ -30,13 +30,13 @@ const Navbar = () => {
         </Link>
       </View>
 
-      <View className="w-[120px] h-[30px] absolute right-0 mx-[60px] flex-row">
-        <Pressable className="w-[30px] h-[30px] pr-[10px] ">
+      <View className="w-[120px] h-[30px] absolute right-0 mx-[60px] flex-row ">
+        <Pressable className="w-[30px] h-[30px] pr-[10px]">
           <Svg
             fill="none"
             viewBox="0 0 24 24"
             stroke="white"
-            className="w-6 h-6 "
+            className="w-6 h-6"
           >
             <Path
               d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"

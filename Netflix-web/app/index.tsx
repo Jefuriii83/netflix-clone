@@ -43,7 +43,7 @@ const image = {
 
 export default function App() {
   return (
-    <ScrollView className="bg-black flex w-screen h-full">
+    <ScrollView className="bg-black flex w-full h-full ">
         <View className="bg-black h-20 flex-row items-center justify-between px-20">
           <Text className="text-white text-4xl">Jetflix</Text>
 
