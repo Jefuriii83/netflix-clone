@@ -4,7 +4,7 @@ import React from 'react'
 const Downloads = () => {
   return (
     <View>
-      <Text>downloads</Text>
+      <Text className='text-lg'>downloads</Text>
     </View>
   )
 }
