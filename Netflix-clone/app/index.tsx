@@ -32,6 +32,7 @@ import {
 } from "react-native";
 import { NativeWindStyleSheet } from "nativewind";
 import { router } from "expo-router";
+import Input from "../src/components/Input";
 
 NativeWindStyleSheet.setOutput({
   default: "native",
@@ -43,31 +44,34 @@ const image = {
 
 export default function App() {
   return (
-    <ScrollView className="bg-black flex w-full h-full ">
-        <View className="bg-black h-20 flex-row items-center justify-between px-20">
-          <Text className="text-white text-4xl">Jetflix</Text>
+    <View className="bg-black flex w-full h-full ">
+      <View className="bg-black h-20 flex-row items-center justify-between px-20">
+        <Text className="text-4xl font-bold text-red-600">Jetflix</Text>
 
-          <Pressable className="bg-red-600"
+        <Pressable
+          className="bg-red-600 rounded-md"
           onPress={() => {
-            router.navigate({pathname: '/profile/'});
-          }}>
-            <Text className="text-white px-4 py-2">Sign In</Text>
-          </Pressable>
-        </View>
+            router.navigate({ pathname: "/profile/" });
+          }}
+        >
+          <Text className="text-white px-4 py-2 font-bold ">Sign In</Text>
+        </Pressable>
+      </View>
 
-        <View className="px-8 pb-8 w-[940px] h-[560px] self-center justify-center items-center">
-          <Text className="font-bold text-white text-7xl text-center mb-2">
-            Unlimited Movies, TV shows, and more
-          </Text>
-          <Text className="text-white mb-6 text-base">
-            Starts at ₱149. Cancel anytime.
-          </Text>
-          <Text className="text-white text-base">
-            Ready to watch? Enter your email to create or restart your
-            membership.
-          </Text>
-        </View>
-    </ScrollView>
+      <View className="px-8 pb-8 w-[940px] h-[560px] self-center justify-center items-center">
+        <Text className="font-bold text-white text-7xl text-center mb-2">
+          Unlimited Movies, TV shows, and more
+        </Text>
+        <Text className="text-white mb-6 text-base">
+          Starts at ₱149. Cancel anytime.
+        </Text>
+        <Text className="text-white text-base">
+          Ready to watch? Enter your email to create or restart your membership.
+        </Text> 
+
+
+      </View>
+    </View>
 
     // <View className="flex-1 items-center justify-center bg-black">
     //   <Text className='text-white'>Open up App.js to start working on your app!</Text>

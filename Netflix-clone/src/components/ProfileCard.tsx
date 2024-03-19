@@ -1,45 +1,59 @@
 import { router } from "expo-router"; // Fix import statement
 import { TouchableOpacity, View, Text, Image } from "react-native";
 import profiles from "../../assets/data/profiles";
-import { Platform } from 'react-native';
+import { Platform } from "react-native";
 
 type ProfileProps = {
-  profile:{
+  profile: {
     name: string;
     avatar: string;
   };
-}
+};
 
 const ProfileCard = (props: ProfileProps) => {
   const { profile } = props;
 
   // Conditionally render based on platform
-  const profileAction = Platform.OS === 'web' ? () => {
-    router.navigate({
-      pathname: "/home/[id]",
-      params: { id: "" },
-    });
-  } : () => {
-    router.navigate({
-      pathname: "./profile/mobile/(tabs)",
-      params: { id: "" },
-    });
-  };
+  const profileAction =
+    Platform.OS === "web"
+      ? () => {
+          router.navigate({
+            pathname: "/home/"
+          });
+        }
+      : () => {
+          router.navigate({
+            pathname: "./profile/mobile/(tabs)",
+            params: { id: "" },
+          });
+        };
 
   return (
-    <TouchableOpacity
-      onPress={profileAction}
-      style={{ marginHorizontal: Platform.OS === 'web' ? 4 : 8 }}
-    >
-      <View>
-        <View style={{ width: 84, height: 84, backgroundColor: 'white', borderRadius: 10 }}>
-          <Image source={{ uri: profile.avatar }} style={{ width: 84, height: 84, alignSelf: 'center' }} />
+    <View className="">
+      <TouchableOpacity
+        onPress={profileAction}
+        style={{ marginHorizontal: Platform.OS === "web" ? 4 : 8 }}
+      >
+        <View className="w-[150px] h-[150px] rounded-xl ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96">
+          <Image
+            source={{ uri: profile.avatar }}
+            className="w-[150px] h-[150px] self-center ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96"
+          />
         </View>
-        <Text style={{ textAlign: 'center', color: 'white', marginTop: 2, fontSize: Platform.OS === 'web' ? 12 : 14 }}>
+        <Text
+          style={{
+            textAlign: "center",
+            color: "white",
+            paddingTop: 2,
+            paddingBottom: 50,
+            fontSize: Platform.OS === "web" ? 24 : 14,
+          }}
+          className="xl:text-9xl"
+          >
           {profile.name}
         </Text>
-      </View>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </View>
   );
 };
 

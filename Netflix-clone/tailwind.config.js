@@ -9,7 +9,7 @@ module.exports = {
       'tablet': {'min' : '768px', 'max' : '1023px'},
       'ls': {'min' : '1024px', 'max' : '1439px'},
       'll': {'min' : '1440px', 'max' : '2559px'},
-      '4k': {'min' : '2560px'}
+      'xl': {'min' : '2560px'}
     },
     extend: {
       backgroundImage:{
