@@ -4,16 +4,15 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import EditScreenInfo from "@/components/EditScreenInfo";
-import { Text, View } from "@/components/Themed";
+import EditScreenInfo from "../../../../src/components/EditScreenInfo";
+import { Text, View } from "../../../../src/components/Themed";
 import { Image, FlatList, ScrollView } from "react-native";
 
-import categories from "../../assets/data/categories";
-import HomeCategories from "@/components/HomeCategories";
+import categories from "../../../../assets/data/categories";
+import HomeCategories from "../../../../src/components/HomeCategories";
 import { Feather, AntDesign, FontAwesome6 } from "@expo/vector-icons";
-import image from "../../assets/images/jetflix-icon.png";
-import HeaderHome from "@/components/HeaderHome";
-import CardButtons from "@/components/CardButtons";
+import HeaderHome from "../../../../src/components/HeaderHome";
+import CardButtons from "../../../../src/components/CardButtons";
 
 const TabOneScreen = () => {
   return (
