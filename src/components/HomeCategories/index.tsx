@@ -20,8 +20,10 @@ interface HomeProperties {
 
 const HomeCategories = (props: HomeProperties) => {
 const {category} = props;
+const navigation = useNavigation();
+
 const onTVShowPress = (movie) => {
-  console.warn(movie.id);
+  navigation.navigate('TVShowDetails', {id: movie.id})
 }
 
   return (
