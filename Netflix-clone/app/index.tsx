@@ -29,9 +29,12 @@ import {
   Pressable,
   ScrollView,
   ImageBackground,
+  Image,
 } from "react-native";
 import { NativeWindStyleSheet } from "nativewind";
 import { router } from "expo-router";
+import Input from "../src/components/Input";
+import { AntDesign } from '@expo/vector-icons';
 
 NativeWindStyleSheet.setOutput({
   default: "native",
@@ -43,31 +46,45 @@ const image = {
 
 export default function App() {
   return (
-    <ScrollView className="bg-black flex w-full h-full ">
-        <View className="bg-black h-20 flex-row items-center justify-between px-20">
-          <Text className="text-white text-4xl">Jetflix</Text>
+    <View className="h-screen w-full flex bg-black">
+      <View className="h-20 pt-5 flex-row items-center justify-between px-20 ms:px-8 mm:px-9 ml:px-10 ls: ll: xl:">
+        <Text className="text-4xl font-bold text-red-600 ms:text-2xl mm:text-2xl ml:text-2xl tablet:text-3xl ls:text-4xl ll:text-5xl xl:text-5xl">
+          JETFLIX
+        </Text>
 
-          <Pressable className="bg-red-600"
+        <Pressable
+          className="bg-red-600 rounded-md hover:bg-red-700"
           onPress={() => {
-            router.navigate({pathname: '/profile/'});
-          }}>
-            <Text className="text-white px-4 py-2">Sign In</Text>
+            router.navigate({ pathname: "/profile/" });
+          }}
+        > 
+          <Text className="text-white px-9 py-3 font-medium text-center ms:text-xs mm:text-xs ml: tablet: ls: ll: xl:">
+            Sign In
+          </Text>
+        </Pressable>
+      </View>
+
+      <View className="px-8 pb-8 justify-center items-center my-auto">
+        <Text className="font-bold text-white text-center text-6xl ms:text-3xl mm:text-4xl ml:text-4xl tablet:text-5xl ls:text-6xl ll:text-7xl xl:text-8xl ">
+          Unlimited Movies, TV shows, and more
+        </Text>
+        <Text className="text-white mb-6 text-base text-center py-6 ms:text-base mm:text-base ml:text-lg tablet:text-xl ls:text-xl ll:text-3xl xl:text-4xl">
+          Starts at ₱149. Cancel anytime.
+        </Text>
+        <Text className="text-white text-base text-center ms:text-base mm:text-base ml:text-lg tablet:text-xl ls:text-xl ll:text-2xl xl:text-4xl">
+          Ready to watch? Enter your email to create or restart your membership.
+        </Text>
+
+        <View className="pt-32 flex-row items-center gap-x-5">
+          <Input type="email" id="email" label="Email"/>
+          <Pressable onPress={() => {}}
+          className="bg-red-600 rounded-md"
+          >
+            <Text className="text-white text-4xl p-4 text-center">Get Started <AntDesign name="right" size={40} color="white" /></Text>
           </Pressable>
         </View>
-
-        <View className="px-8 pb-8 w-[940px] h-[560px] self-center justify-center items-center">
-          <Text className="font-bold text-white text-7xl text-center mb-2">
-            Unlimited Movies, TV shows, and more
-          </Text>
-          <Text className="text-white mb-6 text-base">
-            Starts at ₱149. Cancel anytime.
-          </Text>
-          <Text className="text-white text-base">
-            Ready to watch? Enter your email to create or restart your
-            membership.
-          </Text>
-        </View>
-    </ScrollView>
+      </View>
+    </View>
 
     // <View className="flex-1 items-center justify-center bg-black">
     //   <Text className='text-white'>Open up App.js to start working on your app!</Text>

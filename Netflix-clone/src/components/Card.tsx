@@ -1,6 +1,7 @@
 import { Pressable, View, Text, Image, FlatList } from "react-native";
 import categories from "../../assets/data/categories";
 import movie from "../../assets/data/movie";
+import { router } from "expo-router";
 interface HomeProperties {
   category: {
     id: string;
@@ -23,6 +24,15 @@ const Card = (props: HomeProperties) => {
 
     <>
       <Text className="text-white text-base font-bold">{category.title}</Text>
+      
+      <Pressable 
+      className=""
+      onPress={() => {
+        router.navigate({
+          pathname: "/home/[id]",
+        });
+      }}>
+      
       <FlatList
         data={category.movies}
         renderItem={({ item }) => (
@@ -32,6 +42,7 @@ const Card = (props: HomeProperties) => {
         )}
         horizontal
       />
+      </Pressable>
     </>
   );
 };

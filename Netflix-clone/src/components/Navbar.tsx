@@ -3,6 +3,7 @@ import { View, Text, Pressable } from "react-native";
 import { Path, Svg } from "react-native-svg";
 import Card from "./Card";
 import ProfileCard from "./ProfileCard";
+import profiles from "../../assets/data/profiles";
 
 const Navbar = () => {
   return (
@@ -55,6 +56,7 @@ const Navbar = () => {
             />
           </Svg>
         </Pressable>
+        {/* <ProfileCard profile={profiles.}></ProfileCard> */}
       </View>
     </View>
   );

@@ -1,8 +1,9 @@
+import { Text } from "react-native";
 
-const index = () => {
+const showDetails = () => {
   return (
-    <div>index</div>
+    <Text className="flex justify-center text-center text-8xl">AASDAs</Text>
   )
 }
 
-export default index
+export default showDetails;
