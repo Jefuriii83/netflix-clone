@@ -3,8 +3,15 @@ export default {
         id: 'category1',
         title: 'Popular on Netflix',
         movies: [{
-            id: 'movie1',
+            id: 'Stranger Things',
+            title: 'Stranger Things',
+            year: 2016,
+            episodes: 34,
+            maturityRating: '+16',
+            description: 'A group of kids in a small town discover a world of supernatural occurrences when a young boy vanishes mysteriously.',
             poster: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie1.jpg',
+            casts: ['Millie Bobby Brown, ', 'Finn Wolfhard, ', 'Winona Ryder, '],
+            genre: ['Sci-Fi, ', 'Horror, ', 'Drama']
         }, {
             id: 'movie2',
             poster: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie2.jpg',
