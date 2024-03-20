@@ -3,10 +3,13 @@ import {Text, View} from "../../components/Themed"
 import React, { useState } from 'react'
 import movies from '../../../assets/data/movie';
 import { MaterialIcons } from '@expo/vector-icons';
-import { FontAwesome6, AntDesign, Entypo } from '@expo/vector-icons';
+import {FontAwesome6, AntDesign, Entypo } from '@expo/vector-icons';
 import EpisodeItem from '../../components/EpisodeItem';
 import { Picker } from '@react-native-picker/picker';
 import VideoPlayer from '../../components/VideoPlayer';
+import ReviewItem from '../../components/ReviewItem';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import MoreLikeThis from '../../components/MoreLikeThis';
 
 
 const tvShowSeasonOne = movies.seasons.items[0];
@@ -77,6 +80,17 @@ const seasonNames = movies.seasons.items.map(season => season.name);
         </View>
       </View>
 
+
+      {/* <MoreLikeThis />
+
+      <View className='items-end'>
+      <TouchableOpacity className='bg-gray-600 p-3 w-32 rounded-lg my-2 items-center justify-center'>
+        <Text>Write a review</Text>
+      </TouchableOpacity>
+      </View>
+
+      <ReviewItem /> */}
+      
       <View className='border-b-2 border-b-white'></View>
 
       <Picker 
@@ -99,4 +113,4 @@ const seasonNames = movies.seasons.items.map(season => season.name);
   )
 }
 
-export default TVShowDetails
+export default TVShowDetails;

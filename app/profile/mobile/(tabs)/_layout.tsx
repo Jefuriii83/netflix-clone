@@ -27,11 +27,6 @@ function IndexStack() {
   return (
     <Stack.Navigator
     screenOptions={{
-      headerStyle: {
-        height: 50,
-        backgroundColor: headerColor,
-        paddingTop: StatusBar,
-      },
       headerTintColor: 'white',
     }}
   >
@@ -66,7 +61,9 @@ function SearchStack() {
         height: 50,
         backgroundColor: "black",
       },
-    }}>
+      
+    }}
+  >
       <Stack.Screen name="search" component={TabTwoScreen} />
     </Stack.Navigator>
   );
