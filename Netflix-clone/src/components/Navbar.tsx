@@ -7,10 +7,10 @@ import profiles from "../../assets/data/profiles";
 
 const Navbar = () => {
   return (
-    <View className="h-[68px] w-full flex flex-row px-[60px] items-center relative">
-      <Text className="text-3xl font-bold text-red-500">Jetflix</Text>
+    <View className="h-16 w-full flex-row items-center px-14 z-20">
+      <Text className="text-3xl font-bold text-red-500 ms:text-xl">Jetflix</Text>
 
-      <View className="flex-row px-9">
+      <View className="flex-row px-9 gap-x-4">
         <Link href={""} className="text-white pr-5">
           Home
         </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
         </Link>
       </View>
 
-      <View className="w-[120px] h-[30px] absolute right-0 mx-[60px] flex-row ">
+      <View className="w-[120px] h-[30px] flex-row gap-x-1 right-0 absolute">
         <Pressable className="w-[30px] h-[30px] pr-[10px]">
           <Svg
             fill="none"

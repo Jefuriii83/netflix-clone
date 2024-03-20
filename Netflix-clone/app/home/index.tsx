@@ -24,8 +24,10 @@ const homePage = () => {
 
       <View className="w-11/12 h-auto self-center flex ">
         {/* Header Card */}
-        <View className="h-[590px] w-auto ">
-          {/* <Text className="text-white text-5xl text-center ">Header</Text> */}
+        <View className="h-[590px] w-full ">
+          {/* <Image 
+          source={}
+          className="w-full h-[590px] bg-gradient-to-r from-black"></Image> */}
         </View>
 
         {/* Cards */}
