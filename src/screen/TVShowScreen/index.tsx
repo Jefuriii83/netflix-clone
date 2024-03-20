@@ -77,8 +77,9 @@ const seasonNames = movies.seasons.items.map(season => season.name);
         </View>
       </View>
 
-      <Picker
-      
+      <View className='border-b-2 border-b-white'></View>
+
+      <Picker 
   selectedValue={currentSeason.name}
   onValueChange={(itemValue, itemIndex) => {
     setSeason(movies.seasons.items[itemIndex])
