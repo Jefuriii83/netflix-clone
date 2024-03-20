@@ -1,9 +1,10 @@
-import { StyleSheet } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text} from '../../components/Themed';
 import {Image, FlatList} from 'react-native';
 import categories from '../../../assets/data/categories';
+import { useNavigation } from '@react-navigation/native';
 
  
 interface HomeProperties {
@@ -19,6 +20,9 @@ interface HomeProperties {
 
 const HomeCategories = (props: HomeProperties) => {
 const {category} = props;
+const onTVShowPress = (movie) => {
+  console.warn(movie.id);
+}
 
   return (
     <>
@@ -26,7 +30,12 @@ const {category} = props;
       <FlatList 
         data={category.movies}
         renderItem={({item}) => (
-          <Image style={styles.image} source={{ uri: item.poster}}></Image>
+
+          <Pressable onPress={() => onTVShowPress(item)}>
+              <Image style={styles.image} source={{ uri: item.poster}}></Image>
+          </Pressable>
+
+          
 
         )}
         horizontal

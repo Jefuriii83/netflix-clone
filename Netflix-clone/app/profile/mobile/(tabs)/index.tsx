@@ -7,7 +7,6 @@ import {
 import EditScreenInfo from "../../../../src/components/EditScreenInfo";
 import { Text, View } from "../../../../src/components/Themed";
 import { Image, FlatList, ScrollView } from "react-native";
-
 import categories from "../../../../assets/data/categories";
 import HomeCategories from "../../../../src/components/HomeCategories";
 import { Feather, AntDesign, FontAwesome6 } from "@expo/vector-icons";
@@ -16,8 +15,8 @@ import CardButtons from "../../../../src/components/CardButtons";
 
 const TabOneScreen = () => {
   return (
-    <ScrollView>
-      <View className="mt-5 flex justify-center items-center">
+    <ScrollView className="bg-black">
+      <View className="flex justify-center items-center">
         <Image
           className="h-[500] w-[320]"
           source={{
