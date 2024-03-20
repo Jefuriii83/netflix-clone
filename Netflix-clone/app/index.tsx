@@ -58,7 +58,7 @@ export default function App() {
             router.navigate({ pathname: "/profile/" });
           }}
         > 
-          <Text className="text-white px-9 py-6 font-medium text-center ms:text-xs mm:text-xs ll:text-xl xl:text-4xl">
+          <Text className="text-white px-8 py-3 font-normal text-center ms:text-xs mm:text-xs ll:text-xl xl:text-4xl">
             Sign In
           </Text>
         </Pressable>
@@ -76,7 +76,7 @@ export default function App() {
         </Text>
 
         <View className="pt-32 flex-row items-center justify-center gap-x-5">
-          <Input type="email" id="email" label="Email"/>
+          {/* <Input type="email" id="email" label="Email"/> */}
           <Pressable onPress={() => {}}
           className="bg-red-600 rounded-md"
           >

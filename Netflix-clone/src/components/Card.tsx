@@ -94,8 +94,8 @@ const Card = (props: HomeProperties) => {
                   </View>
 
                   <View className="flex-col w-2/5">
-                    <Text className="text-white">Cast: {selectedMovie.casts}</Text>
-                    <Text className="text-white">Genre: {selectedMovie.genre}</Text>
+                    <Text className="text-white"> <span className="text-[#bcbcbc]">Cast: </span>{selectedMovie.casts}</Text>
+                    <Text className="text-white"> <span className="text[#bcbcbc]">Genre: </span>{selectedMovie.genre}</Text>
                   </View>
                 </View>
               </View>
