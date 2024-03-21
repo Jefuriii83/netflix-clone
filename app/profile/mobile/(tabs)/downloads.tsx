@@ -5,7 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 const Downloads = () => {
   return (
-    <View className='flex-1 items-center gap-10'>
+    <View className='flex-1 items-center gap-10 pt-5'>
 
       <Text className='font-bold text-base'>My Downloads</Text>
       <Text>Movies and TV Shows that you download appear here.</Text>
