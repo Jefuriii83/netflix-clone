@@ -7,26 +7,26 @@ import profiles from "../../assets/data/profiles";
 
 const Navbar = () => {
   return (
-    <View className="h-16 w-full flex-row items-center px-14 z-20">
+    <View className=" h-16 w-full flex-row items-center px-14 z-20 ">
       <Text className="text-3xl font-bold text-red-500 ms:text-xl">Jetflix</Text>
 
       <View className="flex-row px-9 gap-x-4">
-        <Link href={""} className="text-white pr-5">
+        <Link href="/browse" className="text-white pr-5">
           Home
         </Link>
-        <Link href={""} className="text-white pr-5">
+        <Link href="/browse/tv_shows/" className="text-white pr-5">
           TV Shows
         </Link>
-        <Link href={""} className="text-white pr-5">
+        <Link href={"/browse/movies"} className="text-white pr-5">
           Movies
         </Link>
-        <Link href={""} className="text-white pr-5">
+        <Link href={"/browse/news_and_popular"} className="text-white pr-5">
           News & Popular
         </Link>
-        <Link href={""} className="text-white pr-5">
+        <Link href={"/browse/my_list"} className="text-white pr-5">
           My List
         </Link>
-        <Link href={""} className="text-white">
+        <Link href={"/browse/browse_by_languages"} className="text-white">
           Browse by Languages
         </Link>
       </View>
