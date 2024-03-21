@@ -3,7 +3,7 @@ import { FontAwesome } from "@expo/vector-icons";
 
 const Footer = () => {
   return (
-    <View className="h-20 flex px-10  w-11/12 self-center mt-20">
+    <View className="h-20 flex px-10  w-11/12 self-center bg-black">
       {/* Icons */}
       <View className="w-[213px] h-6 flex-row justify-evenly ">
         <Pressable>
