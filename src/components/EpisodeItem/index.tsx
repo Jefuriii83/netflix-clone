@@ -30,11 +30,11 @@ const EpisodeItem = (props: EpisodeProp) => {
     const {episode, onPress} = props;
 
   return (
-    <Pressable className='m-2' onPress={() => onPress(episode)}>
-        <View className='flex-row justify-between items-center mb-5'>
-            <Image className="h-20 aspect-[16/9] rounded-md object-cover" source={{uri: episode.poster}}/>
-            <View className='flex-1 p-3 justify-center'>
-                <Text>{episode.title}</Text>
+    <Pressable className='m-2 bg-black' onPress={() => onPress(episode)}>
+        <View className='flex-row justify-between items-center mb-5 bg-black'>
+            <Image className="h-20 aspect-[16/9] rounded-md object-cover bg-black" source={{uri: episode.poster}}/>
+            <View className='flex-1 p-3 justify-center bg-black'>
+                <Text className='text-white'>{episode.title}</Text>
                 <Text className='text-gray-500 text-sm '>{episode.duration}</Text>
             </View>
             <AntDesign className="" name="download" size={24} color="white" />

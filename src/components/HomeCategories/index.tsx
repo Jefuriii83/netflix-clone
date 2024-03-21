@@ -28,7 +28,7 @@ const onTVShowPress = (movie) => {
 
   return (
     <>
-      <Text style={styles.title}>{category.title}</Text>
+      <Text style={styles.title} className='pt-2 ml-1'>{category.title}</Text>
       <FlatList 
         data={category.movies}
         renderItem={({item}) => (
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     title: {
-      fontSize: 20,
+      fontSize:18,
       fontWeight: 'bold',
     },
     separator: {

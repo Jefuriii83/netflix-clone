@@ -6,11 +6,11 @@ import { AntDesign } from '@expo/vector-icons';
 
 const MenuProfile = () => {
   return (
-    <View className='justify-center items-center py-5'>
+    <View className='justify-center items-center py-5 bg-black'>
       <FlatList
         data={profiles.profile}
         renderItem={({ item }) => (
-            <View className='p-2'>
+            <View className='p-2 bg-black'>
           <Image source={{ uri: item.avatar }} className='w-20 h-20 rounded-md' />
           <Text>{item.name}</Text>
           </View>
@@ -18,7 +18,7 @@ const MenuProfile = () => {
         numColumns={3}
 
       />
-        <View className='absolute bottom-14 right-16'>
+        <View className='absolute bottom-14 right-16 bg-black'>
         <AntDesign name="pluscircle" size={50} color="gray" />
         </View>
       

@@ -6,7 +6,7 @@ const MenuOptions = () => {
   return (
     <View className=''>
 
-       <View className='bg-gray-700 justify-end space-y-4 '>
+       <View className='bg-gray-700 justify-end space-y-4 p-2'>
       <Pressable>
         <Text className='text-lg'>App Setings</Text>
       </Pressable>

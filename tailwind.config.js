@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         'landpage' : "url('./assets/images/netflix-bg.jpg')"
-      }
+      },
     },
   },
   plugins: [],

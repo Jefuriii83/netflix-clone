@@ -18,9 +18,9 @@ const MenuButton = ({ name1, name2, name3, destination }: NameProps) => {
   };
 
   return (
-    <View>
+    <View className="bg-black">
   <TouchableOpacity onPress={handlePress}>
-    <View className="flex-row items-center justify-between bg-gray-700 mb-1 py-2">
+    <View className="flex-row items-center justify-between bg-gray-700 mb-1 py-2 p-2">
       <View className="flex-row items-center bg-gray-700">
         <Feather name={name1} size={24} color="white" />
         <Text className="text-base ml-4">{name2}</Text>
