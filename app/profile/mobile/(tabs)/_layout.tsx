@@ -61,6 +61,7 @@ function SearchStack() {
         height: 50,
         backgroundColor: "black",
       },
+      headerShown: false,
       
     }}
   >
@@ -77,6 +78,7 @@ function DownloadsStack() {
         height: 50,
         backgroundColor: "black",
       },
+      headerShown: false,
     }}>
       <Stack.Screen name="downloads" component={Downloads} />
     </Stack.Navigator>
@@ -91,6 +93,7 @@ function MenuStack() {
         height: 50,
         backgroundColor: "black",
       },
+      headerShown: false,
     }}>
       <Stack.Screen name="menu" component={Menu} />
     </Stack.Navigator>
