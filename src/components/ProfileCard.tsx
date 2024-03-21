@@ -18,7 +18,7 @@ const ProfileCard = (props: ProfileProps) => {
     Platform.OS === "web"
       ? () => {
           router.navigate({
-            pathname: "/home/"
+            pathname: "/browse"
           });
         }
       : () => {

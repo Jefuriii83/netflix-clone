@@ -20,7 +20,7 @@ const homePage = () => {
 
   return (
     <ScrollView className="bg-black">
-      <Navbar></Navbar>
+      <Navbar/>
 
       <View className="w-11/12 h-auto self-center flex ">
         {/* Header Card */}
@@ -42,6 +42,25 @@ const homePage = () => {
       <Footer></Footer>
     </ScrollView>
   );
+
+  // return(
+  //   <View className="w-11/12 h-auto self-center flex ">
+  //       {/* Header Card */}
+  //       <View className="h-[590px] w-full ">
+  //         {/* <Image 
+  //         source={}
+  //         className="w-full h-[590px] bg-gradient-to-r from-black"></Image> */}
+  //       </View>
+
+  //       {/* Cards */}
+  //       <FlatList
+  //         className="overflow-x-hidden"
+  //         data={categories.items}
+  //         renderItem={({ item }) => <Card category={item}></Card>}
+  //         showsHorizontalScrollIndicator={false}
+  //       ></FlatList>
+  //     </View>
+  // )
 };
 
 export default homePage;
