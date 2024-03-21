@@ -67,7 +67,7 @@ const Card = (props: HomeProperties) => {
       >
         <View className="flex justify-center items-center m-auto relative  border-2 border-white">
           {selectedMovie && (
-            <View className="bg-black rounded-2xl w-auto px-10 h-auto">
+            <View className="bg-black rounded-2xl w-full px-10 h-auto ">
               <Pressable
                 onPress={() => setModalVisible(!modalVisible)}
                 className="rounded-2xl absolute right-20 top-10 z-10"
@@ -75,10 +75,10 @@ const Card = (props: HomeProperties) => {
                 <AntDesign name="closecircleo" size={30} color="#C4C4C4" />
               </Pressable>
               <Image
-                className="mt-5 w-full h-96 self-center rounded-xl ms:h-48 ms:w-28 mm:h-48 mm:w-28 ml:h-52 ml:w-28 tablet:h-64 tablet:w-48"
+                className="mt-5 w-full h-[540px] self-center rounded-xl ms:h-48 ms:w-28 mm:h-48 mm:w-28 ml:h-52 ml:w-28 tablet:h-64 tablet:w-48"
                 source={{ uri: selectedMovie.banner }}
               />
-              <View className="h-12 flex-row items-center relative">
+              <View className="h-12 flex-row items-center bottom-16 left-5 w-full">
                 <Pressable className="bg-white w-32 h-full rounded-md flex-row justify-center items-center">
                   <Entypo name="controller-play" size={30} color="black" />
                   <Text className="text-base font-medium">Play</Text>
@@ -86,15 +86,15 @@ const Card = (props: HomeProperties) => {
                 <Pressable className="h-full items-center justify-center p-4 ">
                   <AntDesign name="checkcircleo" size={30} color="#909090" />
                 </Pressable>
-                <Pressable className="items-center justify-center border rounded-full ">
+                <Pressable className="items-center justify-center border-2 border-[#909090] rounded-full ">
                   <EvilIcons name="like" size={30} color="#909090" />
                 </Pressable>
-                <Pressable className="h-30 items-center justify-center right-10 border rounded-full p-2 absolute">
+                <Pressable className="h-30 items-center justify-center right-10 border-2 border-[#909090] rounded-full p-2 absolute">
                   <Octicons name="mute" size={24} color="#909090" />
                 </Pressable>
               </View>
 
-              <View className=" w-full flex-row pt-6">
+              <View className=" w-full flex-row">
                 <View className="flex-col  w-3/5 ">
                   <View className="flex-row gap-x-6">
                     <Text className="text-[#BCBCBC] text-base ">

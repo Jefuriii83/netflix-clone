@@ -11,22 +11,34 @@ const Navbar = () => {
       <Text className="text-3xl font-bold text-red-500 ms:text-xl">Jetflix</Text>
 
       <View className="flex-row px-9 gap-x-4">
-        <Link href="/browse" className="text-white pr-5">
+        <Link href={{
+          pathname: "/browse"
+        }} className="text-white pr-5">
           Home
         </Link>
-        <Link href="/browse/tv_shows/" className="text-white pr-5">
+        <Link href={{
+          pathname: "/browse/tv_shows"
+        }} className="text-white pr-5">
           TV Shows
         </Link>
-        <Link href={"/browse/movies"} className="text-white pr-5">
+        <Link href={{
+          pathname: "/browse/movies"
+        }} className="text-white pr-5">
           Movies
         </Link>
-        <Link href={"/browse/news_and_popular"} className="text-white pr-5">
+        <Link href={{
+          pathname: "/browse/news_and_popular"
+        }} className="text-white pr-5">
           News & Popular
         </Link>
-        <Link href={"/browse/my_list"} className="text-white pr-5">
+        <Link href={{
+          pathname: "/browse/my_list"
+        }} className="text-white pr-5">
           My List
         </Link>
-        <Link href={"/browse/browse_by_languages"} className="text-white">
+        <Link href={{
+          pathname: "/browse/browse_by_languages"
+        }} className="text-white">
           Browse by Languages
         </Link>
       </View>

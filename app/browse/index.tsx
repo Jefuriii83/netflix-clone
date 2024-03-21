@@ -19,10 +19,10 @@ const homePage = () => {
   const { id } = useLocalSearchParams();
 
   return (
-    <ScrollView className="bg-black">
-      <Navbar/>
+    <ScrollView>
+      {/* <Navbar/> */}
 
-      <View className="w-11/12 h-auto self-center flex ">
+      <View className="w-11/12 h-auto self-center flex">
         {/* Header Card */}
         <View className="h-[590px] w-full ">
           {/* <Image 
