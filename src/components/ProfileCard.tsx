@@ -1,5 +1,5 @@
 import { router } from "expo-router"; // Fix import statement
-import { TouchableOpacity, View, Text, Image } from "react-native";
+import { TouchableOpacity, View, Text, Image, Pressable } from "react-native";
 import profiles from "../../assets/data/profiles";
 import { Platform } from "react-native";
 
@@ -32,7 +32,7 @@ const ProfileCard = (props: ProfileProps) => {
 
   return (
     <View className="flex">
-      <TouchableOpacity
+      <Pressable
         onPress={profileAction}
         style={{ marginHorizontal: Platform.OS === "web" ? 4 : 8 }}
       >
@@ -53,7 +53,7 @@ const ProfileCard = (props: ProfileProps) => {
           >
           {profile.name}
         </Text>
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };
