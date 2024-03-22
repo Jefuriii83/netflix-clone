@@ -21,7 +21,6 @@ const MoreLikeThis = () => {
           />
         )}
         numColumns={3}
-        scrollEnabled={false}
       />
       
     </View>

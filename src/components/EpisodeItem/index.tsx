@@ -32,7 +32,7 @@ const EpisodeItem = (props: EpisodeProp) => {
   return (
     <Pressable className='m-2 bg-black' onPress={() => onPress(episode)}>
         <View className='flex-row justify-between items-center mb-5 bg-black'>
-            <Image className="h-20 aspect-[16/9] rounded-md object-cover bg-black" source={{uri: episode.poster}}/>
+            <Image className="h-20 aspect-[16/9] rounded-md object-cover bg-black tablet:h-32" source={{uri: episode.poster}}/>
             <View className='flex-1 p-3 justify-center bg-black'>
                 <Text className='text-white'>{episode.title}</Text>
                 <Text className='text-gray-500 text-sm '>{episode.duration}</Text>

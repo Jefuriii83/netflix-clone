@@ -16,20 +16,26 @@ const ProfileCard = (props: ProfileProps) => {
 
 const isWeb = Platform.OS === "web";
 
+
+// const profileAction = router.navigate({
+//   pathname: "./profile/mobile/(tabs)",
+//   params: { id: "" },
+// });
+
    //Conditionally render based on platform
-   const profileAction =
+    const profileAction =
       Platform.OS === "web"
-        ? () => {
+         ? () => {
           router.navigate({
-              pathname: "/browse"
-            });
-          }
-        : () => {
-            router.navigate({
-              pathname: "./profile/mobile/(tabs)",
-              params: { id: "" },
-            });
-          };
+               pathname: "/browse"
+             });
+           }
+         : () => {
+             router.navigate({
+               pathname: "./profile/mobile/(tabs)",
+               params: { id: "" },
+             });
+           };
 
   return isWeb ? (
     <View className="flex">
