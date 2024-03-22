@@ -4,11 +4,13 @@ import { View, Text, TouchableOpacity, Pressable, FlatList } from "react-native"
 import ProfileCard from "../../src/components/ProfileCard";
 import profiles from "../../assets/data/profiles";
 import { Platform} from 'react-native';
+import { MonoText } from "../../src/components/StyledText";
 
 const profile = () => {
     const { id } = useLocalSearchParams();
 
     return(
+  
         <View className=" bg-black flex h-full w-full items-center justify-center ">
             <Text className="text-white text-center text-6xl my-7 ms:text-3xl ms:my-5 mm:text-3xl ml:text-3xl ml:my-5 tablet:text-3xl ls:text-4xl ll:text-5xl xl:text-9xl">Who's watching?</Text>
             {/* AvatarCard */}
@@ -29,6 +31,7 @@ const profile = () => {
             </Pressable>
 
         </View>
+       
     )
 }
 

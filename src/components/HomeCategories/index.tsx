@@ -28,13 +28,13 @@ const onTVShowPress = (movie) => {
 
   return (
     <>
-      <Text style={styles.title} className='pt-2 ml-1'>{category.title}</Text>
+      <Text style={styles.title} className='pt-2 ml-1 text-white tablet:text-2xl'>{category.title}</Text>
       <FlatList 
         data={category.movies}
         renderItem={({item}) => (
 
           <Pressable onPress={() => onTVShowPress(item)}>
-              <Image style={styles.image} source={{ uri: item.poster}}></Image>
+              <Image className='w-[100px] h-[150px] object-cover rounded-10 m-1 tablet:w-[200px] tablet:h-[250px]' source={{ uri: item.poster}}></Image>
           </Pressable>
 
           
