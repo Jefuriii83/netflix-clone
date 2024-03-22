@@ -14,6 +14,7 @@ const ProfileCard = (props: ProfileProps) => {
   
   const { profile } = props;
 
+const isWeb = Platform.OS === "web";
 
    //Conditionally render based on platform
    const profileAction =
@@ -30,7 +31,32 @@ const ProfileCard = (props: ProfileProps) => {
             });
           };
 
-  return (
+  return isWeb ? (
+    <View className="flex">
+      <Pressable
+        onPress={profileAction}
+        style={{ marginHorizontal: Platform.OS === "web" ? 4 : 8 }}
+      >
+        <View className="group flex-row w-44 mx-auto items-center justify-center border-2 border-transparent group-hover:border-white overflow-hidden ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96">
+          <Image
+            source={{ uri: profile.avatar }}
+            className="w-44 h-44 rounded-md flex ms:w-24 ms:h-24 mm:w-24 mm:h-24 ml:h-28 ml:w-28 tablet:w-[100px] tablet:h-[100px] xl:w-96 xl:h-96"
+          />
+        </View>
+        <Text
+          style={{
+            textAlign: "center",
+            color: "white",
+            paddingTop: 2,
+            paddingBottom: 10,
+            // fontSize: Platform.OS === "web" ? 16 : 14,
+          }}
+          className="xl:text-5xl"
+          >
+          {profile.name}
+        </Text>
+      </Pressable>
+    </View>) : (
     <View className="flex">
       <Pressable
         onPress={profileAction}
