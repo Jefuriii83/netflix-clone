@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   ScrollView,
   FlatList,
+  Image
 } from "react-native";
 import { NativeWindStyleSheet } from "nativewind";
 import ProfileCard from "../../src/components/ProfileCard";
@@ -24,7 +25,13 @@ const homePage = () => {
 
       <View className="w-11/12 h-full self-center flex">
         {/* Header Card */}
-        <View className="h-[590px] w-full ">
+        <View className="h-[590px] w-full justify-center items-center ">
+        <Image
+          className="flex justify-center items-center h-full w-full bg-black"
+          source={{
+            uri: "https://assetsio.gnwcdn.com/-1574325374907.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
+          }}
+        />
           {/* <Image 
           source={}
           className="w-full h-[590px] bg-gradient-to-r from-black"></Image> */}

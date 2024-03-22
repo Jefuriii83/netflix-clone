@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const HeaderHome = ({ title }: HeaderProps) => {
   return (
-    <View className="absolute flex-row h-[50] w-screen top-0 items-center space-x-3 bg-black" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+    <View className="absolute flex-row h-[50] w-screen top-0 items-center space-x-3 bg-black tablet:justify-center" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
       <Text className="ml-2 text-2xl text-red-500 font-bold tablet:text-4xl">{title}</Text>
       <TouchableOpacity className="border border-white px-2 py-1 rounded-xl">
       <Link href={"/(tabs)/downloads"} className="text-white text-base tablet:text-lg">TV Shows</Link>

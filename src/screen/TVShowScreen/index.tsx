@@ -45,6 +45,7 @@ const TVShowDetails = () => {
         )}
         ListHeaderComponent={
           <Picker
+          className="tablet:pml-5 tablet:w-[700]"
             selectedValue={currentSeason.name}
             onValueChange={(itemValue, itemIndex) => {
               setSeason(movies.seasons.items[itemIndex]);
@@ -283,7 +284,7 @@ return (
         
        
 </View>
-       <View className="h-screen">
+       <View className="h-screen tablet:h-[1000]">
        <TabView
          navigationState={{ index, routes }}
          renderScene={renderScene}
