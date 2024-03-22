@@ -15,8 +15,10 @@ import CardButtons from "../../../../src/components/CardButtons";
 
 const TabOneScreen = () => {
   return (
-    <ScrollView className="bg-black">
-      <View className="flex justify-center items-center bg-black">
+      
+      <ScrollView className="bg-black">
+
+<View className="flex justify-center items-center bg-black">
         <Image
           className="h-[500] w-[320] bg-black"
           source={{
@@ -29,38 +31,13 @@ const TabOneScreen = () => {
       <CardButtons />
       </View>
 
-
       <FlatList
         className="pt-5"
         data={categories.items}
         renderItem={({ item }) => <HomeCategories category={item} />}
       />
-    </ScrollView>
+</ScrollView>
   );
 };
 
 export default TabOneScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-  image: {
-    width: 100,
-    height: 150,
-    resizeMode: "cover",
-    borderRadius: 10,
-    margin: 5,
-  },
-});

@@ -9,7 +9,8 @@ import {
 // import { NativeWindStyleSheet } from "nativewind";
 import ProfileCard from "../../src/components/ProfileCard";
 import profiles from "../../assets/data/profiles";
-import { Platform } from "react-native";
+import { Platform} from 'react-native';
+import { MonoText } from "../../src/components/StyledText";
 
 const profile = () => {
   const { id } = useLocalSearchParams();
