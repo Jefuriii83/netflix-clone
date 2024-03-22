@@ -9,6 +9,7 @@ import { MonoText } from "../../src/components/StyledText";
 const profile = () => {
     const { id } = useLocalSearchParams();
 
+<<<<<<< Updated upstream
     return(
   
         <View className=" bg-black flex h-full w-full items-center justify-center ">
@@ -23,6 +24,28 @@ const profile = () => {
                 ></FlatList>
 
             </View>
+=======
+  return (
+    <View className=" bg-black flex h-full w-full items-center justify-center ">
+      <Text className="text-white text-center py-6 text-6xl ms:text-3xl mm:text-4xl ml:text-4xl tablet:text-5xl ls:text-6xl ll:text-6xl">
+        Who's watching?
+      </Text>
+      {/* AvatarCard */}
+      <View className="flex-row flex-wrap ms:w-52 mm:w-52 ml:w-60">
+        {profiles.profile.map((item) => (
+          <ProfileCard profile={item} key={item.name}/>
+        ))}
+      </View>
+
+      <Pressable className="self-center pt-5">
+        <Text className="border text-gray-400 border-gray-400 py-2 px-5 hover:text-white ms:text-xs mm:mt-[26px] mm:mb-[13px] ml:text-[14px] ml:mt-[26px] ml:mb-[13px] tablet:px-5 tablet:py-[6px] ls:text-xs ll:text-xl ll:px-8 ll:py-2 ll:mt-8 ll:mb-4 xl:text-4xl xl:py-5 xl:px-9 xl: xl:mt-28">
+          Manage Profile
+        </Text>
+      </Pressable>
+    </View>
+  );
+};
+>>>>>>> Stashed changes
 
             <Pressable
                 className='self-center '
