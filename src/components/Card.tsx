@@ -65,6 +65,7 @@ const Card = (props: HomeProperties) => {
           setModalVisible(!modalVisible);
         }}
       >
+        <ScrollView>
         <View className="flex justify-center items-center m-auto relative  border-2 border-white">
           {selectedMovie && (
             <View className="bg-black rounded-2xl w-full px-10 h-auto ">
@@ -151,6 +152,7 @@ const Card = (props: HomeProperties) => {
             </View>
           )}
         </View>
+        </ScrollView>
       </Modal>
     </>
   );
