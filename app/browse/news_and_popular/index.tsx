@@ -8,6 +8,10 @@ const newsAndPopular = () => {
     <ScrollView>
       {/* <Navbar/> */}
       <View className="w-11/12 mt-5 h-auto self-center flex">
+
+      <View>
+          <Text className="text-white text-2xl font-bold pb-4">New & Popular</Text>
+        </View>
         {/* Cards */}
         <FlatList
           // className="overflow-x-hidden"
