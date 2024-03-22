@@ -33,7 +33,7 @@ const Card = (props: HomeProperties) => {
 
   return (
     <>
-      <Text className="text-white text-base font-bold ms:text-sm">
+      <Text className="text-white text-base font-bold ms:text-sm xl:text-4xl">
         {category.title}
       </Text>
 
@@ -45,11 +45,11 @@ const Card = (props: HomeProperties) => {
               setSelectedMovie(item);
               setModalVisible(true);
             }}
-            className="w-64 h-96 rounded-xl ms:h-48 ms:w-28 mm:h-48 mm:w-28 ml:h-52 ml:w-28 tablet:h-64 tablet:w-48"
+            className="w-auto h-auto rounded-xl"
           >
             <Image
               source={{ uri: item.poster }}
-              className="w-64 h-96 rounded-xl m-1"
+              className="w-64 h-96 rounded-xl m-1 ms:w-44 ms:h-64 mm:w-44 mm:h-64 ml:w-44 ml:h-64 xl:w-[400px] xl:h-[600px]"
             />
           </Pressable>
         )}
@@ -96,6 +96,7 @@ const Card = (props: HomeProperties) => {
 
               <View className=" w-full flex-row">
                 <View className="flex-col  w-3/5 ">
+                  <Text className="text-white text-2xl absolute -top-10 font-bold">{selectedMovie.title}</Text>
                   <View className="flex-row gap-x-6">
                     <Text className="text-[#BCBCBC] text-base ">
                       {selectedMovie.year}
@@ -116,11 +117,11 @@ const Card = (props: HomeProperties) => {
                 <View className="flex-col w-2/5">
                   <Text className="text-white">
                     <Text className="text-[#BCBCBC]">Cast:</Text>{" "}
-                    {selectedMovie.casts}
+                    {selectedMovie.casts.join(', ')}
                   </Text>
                   <Text className="text-white">
                     <Text className="text-[#BCBCBC]">Genre:</Text>{" "}
-                    {selectedMovie.genre}
+                    {selectedMovie.genre.join(', ')}
                   </Text>
                 </View>
               </View>
@@ -138,10 +139,10 @@ const Card = (props: HomeProperties) => {
                 </Text>
                 <Text className="text-[#BCBCBC]">Creators: </Text>
                 <Text className="text-[#BCBCBC]">
-                  Cast: {selectedMovie.casts}
+                  Cast: {selectedMovie.casts.join(', ')}
                 </Text>
                 <Text className="text-[#BCBCBC]">
-                  Genres: {selectedMovie.genre}
+                  Genres: {selectedMovie.genre.join(', ')}
                 </Text>
                 <Text className="text-[#BCBCBC]">
                   Maturity rating: {selectedMovie.maturityRating}

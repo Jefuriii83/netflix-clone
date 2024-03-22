@@ -27,7 +27,7 @@ function IndexStack() {
   return (
     <Stack.Navigator
     screenOptions={{
-      headerTintColor: 'white',
+      headerTintColor: 'black',
     }}
   >
     <Stack.Screen 
