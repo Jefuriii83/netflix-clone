@@ -39,7 +39,7 @@ function IndexStack() {
       component={TVShowDetails} 
       options={{
         headerTintColor: 'white',
-          headerTitleStyle: { color: 'white' },
+          headerTitleStyle: { color: 'red', fontSize: 30 },
           headerStyle: {
             backgroundColor: headerColor,
           },
@@ -47,6 +47,7 @@ function IndexStack() {
 
           headerShown: true,
           headerStatusBarHeight: 0,
+          title: "Jetflix",
       }}
     />
   </Stack.Navigator>
