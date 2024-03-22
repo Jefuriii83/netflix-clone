@@ -4,7 +4,7 @@ import { Feather, AntDesign, FontAwesome6 } from '@expo/vector-icons';
 
 const CardButtons = () => {
   return (
-    <View className="absolute bottom-5 flex flex-row space-x-5 items-center">
+    <View className="absolute bottom-5 flex flex-row space-x-5 left-10 items-center">
       <TouchableOpacity className="items-center">
         <Feather name="plus" size={20} color="white" />
         <Text className="text-base text-white">My List</Text>
